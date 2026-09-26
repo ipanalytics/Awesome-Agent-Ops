@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="400" viewBox="0 0 1600 400">
+  <rect width="1600" height="400" fill="#0d1117"/>
+  <text x="800" y="180" font-family="monospace" font-size="64" fill="#58a6ff" text-anchor="middle">Awesome Agent Ops</text>
+  <text x="800" y="250" font-family="monospace" font-size="28" fill="#8b949e" text-anchor="middle">Running AI agents in production — the boring parts that matter</text>
+  <line x1="200" y1="300" x2="1400" y2="300" stroke="#58a6ff" stroke-width="4"/>
+</svg>

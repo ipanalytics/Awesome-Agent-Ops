@@ -21,8 +21,16 @@ CONTENTS_EN = "## Contents"
 CONTENTS_RU = "## Содержание"
 TAGS_START = "<!-- tags:start -->"
 TAGS_END = "<!-- tags:end -->"
-HEADER_EN = "# Awesome Agent Ops\n\n_Русская версия: [README.ru.md](README.ru.md)_\n"
-HEADER_RU = "# Awesome Agent Ops\n\n_English version: [README.md](README.md)_\n"
+HEADER_EN = (
+    "# Awesome Agent Ops\n\n"
+    "_Русская версия: [README.ru.md](README.ru.md)_\n\n"
+    '<p align="center">\n  <img src="./site/banner.svg" alt="Awesome Agent Ops" width="100%">\n</p>\n'
+)
+HEADER_RU = (
+    "# Awesome Agent Ops\n\n"
+    "_English version: [README.md](README.md)_\n\n"
+    '<p align="center">\n  <img src="./site/banner.svg" alt="Awesome Agent Ops" width="100%">\n</p>\n'
+)
 
 
 def load(name):

@@ -211,7 +211,7 @@
       "title_en": "A sandbox without root",
       "title_ru": "Песочница без root",
       "url": "https://github.com/ipanalytics/Hermes-Agent-Ops/tree/main/04-role-profiles",
-      "text_en": "proot, one writable tree, and a home directory that is simply not mounted.",
+      "text_en": "proot, one writable tree, and a home directory that is not mounted at all.",
       "text_ru": "proot, одно дерево на запись, домашний каталог вообще не примонтирован.",
       "tags": [
         "isolation"

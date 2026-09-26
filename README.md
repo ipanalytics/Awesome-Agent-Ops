@@ -2,6 +2,10 @@
 
 _Русская версия: [README.ru.md](README.ru.md)_
 
+<p align="center">
+  <img src="./site/banner.svg" alt="Awesome Agent Ops" width="100%">
+</p>
+
 A curated list of what it actually takes to **run a personal AI agent in production** — not
 prompt tricks, but the boring layer: schedules, context budgets, secrets, sandboxes, delivery,
 and the failure modes nobody warns you about.
@@ -63,7 +67,7 @@ full: [Hermes-Agent-Ops](https://github.com/ipanalytics/Hermes-Agent-Ops).
 - **[Tool guardrails](https://github.com/ipanalytics/Hermes-Agent-Ops/tree/main/15-agent-tool-guardrails)** — an allow-list per tool, plus a hook that refuses the destructive shape before it runs.
   *(isolation, secrets)*
 
-- **[A sandbox without root](https://github.com/ipanalytics/Hermes-Agent-Ops/tree/main/04-role-profiles)** — proot, one writable tree, and a home directory that is simply not mounted. *(isolation)*
+- **[A sandbox without root](https://github.com/ipanalytics/Hermes-Agent-Ops/tree/main/04-role-profiles)** — proot, one writable tree, and a home directory that is not mounted at all. *(isolation)*
 
 - **[Wallet guard](https://github.com/ipanalytics/Hermes-Agent-Ops/tree/main/01-agent-wallet-guard)** — spend limits and a kill switch that does not depend on the agent's own judgement. *(secrets,
   isolation)*

@@ -1,0 +1,17 @@
+name: catalog checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  readme-matches-data:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: README matches the data files
+        run: python3 scripts/build_readme.py --check

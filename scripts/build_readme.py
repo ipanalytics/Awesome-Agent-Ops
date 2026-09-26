@@ -24,11 +24,19 @@ TAGS_END = "<!-- tags:end -->"
 HEADER_EN = (
     "# Awesome Agent Ops\n\n"
     "_Русская версия: [README.ru.md](README.ru.md)_\n\n"
+    '[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)\n'
+    "![Entries](https://img.shields.io/badge/entries-27-blue)\n"
+    "[![Catalog checks](https://github.com/ipanalytics/Awesome-Agent-Ops/actions/workflows/catalog-checks.yml/badge.svg)]"
+    "(.github/workflows/catalog-checks.yml)\n\n"
     '<p align="center">\n  <img src="./site/banner.svg" alt="Awesome Agent Ops" width="100%">\n</p>\n'
 )
 HEADER_RU = (
     "# Awesome Agent Ops\n\n"
     "_English version: [README.md](README.md)_\n\n"
+    '[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)\n'
+    "![Entries](https://img.shields.io/badge/entries-27-blue)\n"
+    "[![Catalog checks](https://github.com/ipanalytics/Awesome-Agent-Ops/actions/workflows/catalog-checks.yml/badge.svg)]"
+    "(.github/workflows/catalog-checks.yml)\n\n"
     '<p align="center">\n  <img src="./site/banner.svg" alt="Awesome Agent Ops" width="100%">\n</p>\n'
 )
 

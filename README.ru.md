@@ -2,6 +2,10 @@
 
 _English version: [README.md](README.md)_
 
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+![Entries](https://img.shields.io/badge/entries-27-blue)
+[![Catalog checks](https://github.com/ipanalytics/Awesome-Agent-Ops/actions/workflows/catalog-checks.yml/badge.svg)](.github/workflows/catalog-checks.yml)
+
 <p align="center">
   <img src="./site/banner.svg" alt="Awesome Agent Ops" width="100%">
 </p>

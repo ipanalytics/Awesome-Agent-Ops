@@ -1,0 +1,18 @@
+{
+  "en": {
+    "head": "A curated list of what it actually takes to **run a personal AI agent in production** — not\nprompt tricks, but the boring layer: schedules, context budgets, secrets, sandboxes, delivery,\nand the failure modes nobody warns you about.\n\nEverything here is written from an agent that has been running unattended since mid-2026 on one\nsmall server: cron jobs that fire at 03:10, a Telegram front end, health data, mail, and\nGitHub. The practice notes link to a series of 34 modules where each one is written out in\nfull: [Hermes-Agent-Ops](https://github.com/ipanalytics/Hermes-Agent-Ops).",
+    "tail": {
+      "What this list is not": "- Not prompt engineering. Different problem, different list.\n- Not a framework. Most of these are a cron entry, a script and a JSON file.\n- Not finished. Every item here was added because something broke.",
+      "Contributing": "Corrections and additions are welcome — especially *failure modes*, with the symptom, the cause,\nand the fix. One line per item, real link, no marketing.",
+      "License": "MIT for the list and for the linked modules unless a module says otherwise."
+    }
+  },
+  "ru": {
+    "head": "Список о том, что на самом деле нужно, чтобы **личный ИИ-агент работал в проде**: не трюки с\nпромптами, а скучный слой — расписания, бюджет контекста, секреты, песочницы, доставка и те\nполомки, о которых никто не предупреждает.\n\nВсё здесь написано с агента, который работает без присмотра с середины 2026 года на одном\nнебольшом сервере: кроны в 03:10, Telegram, медицинские данные, почта и GitHub. Практические\nзаметки ссылаются на серию из 34 модулей, где каждая тема разобрана целиком:\n[Hermes-Agent-Ops](https://github.com/ipanalytics/Hermes-Agent-Ops).",
+    "tail": {
+      "Чем этот список не является": "- Не про промпт-инжиниринг. Это другая задача и другой список.\n- Не фреймворк. Почти всё здесь — запись в кроне, скрипт и JSON-файл.\n- Не закончен. Каждый пункт появился потому, что что-то сломалось.",
+      "Как помочь": "Правки и дополнения приветствуются — особенно **режимы отказа**: симптом, причина, лечение.\nОдна строка на пункт, живая ссылка, без маркетинга.",
+      "Лицензия": "MIT для списка и для связанных модулей, если в модуле не сказано иное."
+    }
+  }
+}

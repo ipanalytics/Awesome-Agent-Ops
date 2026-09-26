@@ -1,0 +1,387 @@
+{
+  "$comment": "Единственный источник списка. README.md и README.ru.md собираются из него: scripts/build_readme.py. Правки вносить сюда, не в README.",
+  "version": 1,
+  "categories": [
+    {
+      "id": "failure-modes",
+      "title_en": "Start with the failure modes",
+      "title_ru": "Начните с поломок"
+    },
+    {
+      "id": "scheduled-work",
+      "title_en": "Scheduled work",
+      "title_ru": "Работа по расписанию"
+    },
+    {
+      "id": "context-and-cost",
+      "title_en": "Context and cost",
+      "title_ru": "Контекст и деньги"
+    },
+    {
+      "id": "isolation-and-secrets",
+      "title_en": "Isolation and secrets",
+      "title_ru": "Изоляция и секреты"
+    },
+    {
+      "id": "delivery-and-attention",
+      "title_en": "Delivery and attention",
+      "title_ru": "Доставка и внимание"
+    },
+    {
+      "id": "memory",
+      "title_en": "Memory that does not rot",
+      "title_ru": "Память, которая не гниёт"
+    },
+    {
+      "id": "watching-the-machine",
+      "title_en": "Watching the machine, not just the model",
+      "title_ru": "Следить за машиной, а не только за моделью"
+    }
+  ],
+  "entries": [
+    {
+      "id": "the-job-that-ran-and-said-nothing",
+      "category": "failure-modes",
+      "title_en": "The job that ran and said nothing",
+      "title_ru": "Задача отработала и промолчала",
+      "url": "https://github.com/ipanalytics/Hermes-Agent-Ops/tree/main/28-digest-delivery-health",
+      "text_en": "a cron that fails silently is worse than one that crashes. Deliverability is a metric, not a hope.",
+      "text_ru": "крон, который падает тихо, хуже того, который падает громко. Доставляемость — это метрика, а не надежда. .",
+      "tags": [
+        "delivery",
+        "cron"
+      ]
+    },
+    {
+      "id": "the-job-that-stopped-existing",
+      "category": "failure-modes",
+      "title_en": "The job that stopped existing",
+      "title_ru": "Задача перестала существовать",
+      "url": "https://github.com/ipanalytics/Hermes-Agent-Ops/tree/main/30-schedule-audit",
+      "text_en": "schedules drift: a one-shot that never re-armed, a job paused \"for a day\" in March. Audit the schedule itself, not the output.",
+      "text_ru": "расписания дрейфуют: одноразовый крон не перевзвёлся, задание «на день» стоит с марта. Проверять надо расписание, а не выпуск. .",
+      "tags": [
+        "cron",
+        "publishing"
+      ]
+    },
+    {
+      "id": "the-report-nobody-read",
+      "category": "failure-modes",
+      "title_en": "The report nobody read",
+      "title_ru": "Отчёт, который никто не прочитал",
+      "url": "https://github.com/ipanalytics/Hermes-Agent-Ops/tree/main/12-topic-routing",
+      "text_en": "a digest delivered into the wrong channel is the same as not delivered. Route by kind, not by habit.",
+      "text_ru": "выпуск не в тот топик равен невыпуску. Разводить по смыслу, а не по привычке. .",
+      "tags": [
+        "delivery",
+        "routing"
+      ]
+    },
+    {
+      "id": "the-context-that-quietly-shrank",
+      "category": "failure-modes",
+      "title_en": "The context that quietly shrank",
+      "title_ru": "Контекст, который тихо сжался",
+      "url": "https://github.com/ipanalytics/Hermes-Agent-Ops/tree/main/31-compaction-effect-check",
+      "text_en": "compaction is invisible until it drops the one detail you needed. Measure what compaction costs before you trust it.",
+      "text_ru": "компакция незаметна, пока не вынесет нужную деталь. Сначала измерьте её цену. .",
+      "tags": [
+        "context"
+      ]
+    },
+    {
+      "id": "a-cron-for-the-crons",
+      "category": "scheduled-work",
+      "title_en": "A cron for the crons",
+      "title_ru": "Крон для кронов",
+      "url": "https://github.com/ipanalytics/Hermes-Agent-Ops/tree/main/05-cron-of-crons",
+      "text_en": "one job whose only purpose is to notice that another job did not run.",
+      "text_ru": "одно задание, чья единственная цель — заметить, что другое не запустилось.",
+      "tags": [
+        "cron",
+        "observability"
+      ]
+    },
+    {
+      "id": "fresh-prompt-linting",
+      "category": "scheduled-work",
+      "title_en": "Fresh-prompt linting",
+      "title_ru": "Линтер свежих промптов",
+      "url": "https://github.com/ipanalytics/Hermes-Agent-Ops/tree/main/07-fresh-prompt-linter",
+      "text_en": "prompts rot faster than code: they reference jobs, files and names that no longer exist.",
+      "text_ru": "промпты гниют быстрее кода: ссылаются на задания, файлы и имена, которых уже нет.",
+      "tags": [
+        "cron",
+        "evals"
+      ]
+    },
+    {
+      "id": "from-llm-job-to-script",
+      "category": "scheduled-work",
+      "title_en": "From LLM job to script",
+      "title_ru": "Из LLM-задания в скрипт",
+      "url": "https://github.com/ipanalytics/Hermes-Agent-Ops/tree/main/24-llm-to-script",
+      "text_en": "the best cron is a collector script plus a small model call at the end, not an agent loop.",
+      "text_ru": "лучший крон — это скрипт-сборщик плюс небольшой вызов модели в конце, а не петля агента.",
+      "tags": [
+        "cron",
+        "cost"
+      ]
+    },
+    {
+      "id": "task-evals-and-autopsy",
+      "category": "scheduled-work",
+      "title_en": "Task evals and autopsy",
+      "title_ru": "Эвалы и вскрытие",
+      "url": "https://github.com/ipanalytics/Hermes-Agent-Ops/tree/main/20-task-evals-and-autopsy",
+      "text_en": "when a job fails, reconstruct what it saw instead of re-running it and guessing.",
+      "text_ru": "когда задание упало, восстановите, что оно видело, вместо повторного прогона наугад.",
+      "tags": [
+        "evals"
+      ]
+    },
+    {
+      "id": "cost-governance",
+      "category": "context-and-cost",
+      "title_en": "Cost governance",
+      "title_ru": "Управление расходами",
+      "url": "https://github.com/ipanalytics/Hermes-Agent-Ops/tree/main/19-cost-governance",
+      "text_en": "a hard budget with a graceful downgrade beats a surprise invoice.",
+      "text_ru": "жёсткий бюджет с мягкой деградацией лучше неожиданного счёта.",
+      "tags": [
+        "cost"
+      ]
+    },
+    {
+      "id": "the-cost-dashboard",
+      "category": "context-and-cost",
+      "title_en": "The cost dashboard",
+      "title_ru": "Дашборд расходов",
+      "url": "https://github.com/ipanalytics/Hermes-Agent-Ops/tree/main/10-cost-dashboard",
+      "text_en": "per-job, per-model spend, so \"the agent got expensive\" becomes a number with a cause.",
+      "text_ru": "траты по заданиям и моделям, чтобы «агент подорожал» стало числом с причиной.",
+      "tags": [
+        "cost",
+        "observability"
+      ]
+    },
+    {
+      "id": "the-thinking-layer",
+      "category": "context-and-cost",
+      "title_en": "The thinking layer",
+      "title_ru": "Слой размышления",
+      "url": "https://github.com/ipanalytics/Hermes-Agent-Ops/tree/main/29-thinking-layer-cost",
+      "text_en": "pay for reasoning where the decision is, not where the text is.",
+      "text_ru": "платите за рассуждение там, где решение, а не там, где текст.",
+      "tags": [
+        "cost",
+        "routing"
+      ]
+    },
+    {
+      "id": "compaction-that-never-summarises",
+      "category": "context-and-cost",
+      "title_en": "Compaction that never summarises",
+      "title_ru": "Компакция без пересказа",
+      "url": "https://github.com/ipanalytics/Hermes-Agent-Ops/tree/main/31-compaction-effect-check",
+      "text_en": "the alternative to summarising: delete what is stale, keep the rest verbatim.",
+      "text_ru": "альтернатива пересказу: удалить то, что устарело, остальное оставить дословно.",
+      "tags": [
+        "context",
+        "cost"
+      ]
+    },
+    {
+      "id": "tool-guardrails",
+      "category": "isolation-and-secrets",
+      "title_en": "Tool guardrails",
+      "title_ru": "Ограничители инструментов",
+      "url": "https://github.com/ipanalytics/Hermes-Agent-Ops/tree/main/15-agent-tool-guardrails",
+      "text_en": "an allow-list per tool, plus a hook that refuses the destructive shape before it runs.",
+      "text_ru": "белый список на инструмент плюс хук, который отказывает опасной форме до запуска.",
+      "tags": [
+        "isolation",
+        "secrets"
+      ]
+    },
+    {
+      "id": "a-sandbox-without-root",
+      "category": "isolation-and-secrets",
+      "title_en": "A sandbox without root",
+      "title_ru": "Песочница без root",
+      "url": "https://github.com/ipanalytics/Hermes-Agent-Ops/tree/main/04-role-profiles",
+      "text_en": "proot, one writable tree, and a home directory that is simply not mounted.",
+      "text_ru": "proot, одно дерево на запись, домашний каталог вообще не примонтирован.",
+      "tags": [
+        "isolation"
+      ]
+    },
+    {
+      "id": "wallet-guard",
+      "category": "isolation-and-secrets",
+      "title_en": "Wallet guard",
+      "title_ru": "Сторож кошелька",
+      "url": "https://github.com/ipanalytics/Hermes-Agent-Ops/tree/main/01-agent-wallet-guard",
+      "text_en": "spend limits and a kill switch that does not depend on the agent's own judgement.",
+      "text_ru": "лимиты и рубильник, который не зависит от собственного суждения агента.",
+      "tags": [
+        "secrets",
+        "isolation"
+      ]
+    },
+    {
+      "id": "publishing-an-agent-s-work-safely",
+      "category": "isolation-and-secrets",
+      "title_en": "Publishing an agent's work safely",
+      "title_ru": "Публикация работы агента",
+      "url": "https://github.com/ipanalytics/Hermes-Agent-Ops/tree/main/03-agent-ops-playbook",
+      "text_en": "the denylist that runs before `git push`, because \"I will remember to check\" is not a control.",
+      "text_ru": "стоп-лист, который срабатывает до `git push`: «я не забуду проверить» — это не контроль.",
+      "tags": [
+        "publishing",
+        "secrets"
+      ]
+    },
+    {
+      "id": "voice-that-lands-as-voice",
+      "category": "delivery-and-attention",
+      "title_en": "Voice that lands as voice",
+      "title_ru": "Голос, который приходит голосом",
+      "url": "https://github.com/ipanalytics/Hermes-Agent-Ops/tree/main/13-voice-input-hypotheses",
+      "text_en": "an audio reply has to arrive as a voice note, at a pace a human can stand, or it may as well be text.",
+      "text_ru": "аудио-ответ должен приходить голосовым сообщением и в темпе, который человек выдержит.",
+      "tags": [
+        "voice",
+        "delivery"
+      ]
+    },
+    {
+      "id": "delivery-obligations",
+      "category": "delivery-and-attention",
+      "title_en": "Delivery obligations",
+      "title_ru": "Обязательства по доставке",
+      "url": "https://github.com/ipanalytics/Hermes-Agent-Ops/tree/main/28-digest-delivery-health",
+      "text_en": "keep a record of what must be delivered and when, and check it; do not infer it from logs.",
+      "text_ru": "держите список того, что и когда должно быть доставлено, и проверяйте его, а не логи.",
+      "tags": [
+        "delivery"
+      ]
+    },
+    {
+      "id": "topic-routing",
+      "category": "delivery-and-attention",
+      "title_en": "Topic routing",
+      "title_ru": "Маршрутизация по темам",
+      "url": "https://github.com/ipanalytics/Hermes-Agent-Ops/tree/main/12-topic-routing",
+      "text_en": "one chat, many topics: status goes to the log, decisions go to the human, alerts go where they will be seen.",
+      "text_ru": "статус — в журнал, решения — человеку, а тревоги — туда, где их увидят.",
+      "tags": [
+        "routing",
+        "delivery"
+      ]
+    },
+    {
+      "id": "quiet-hours-and-cadence",
+      "category": "delivery-and-attention",
+      "title_en": "Quiet hours and cadence",
+      "title_ru": "Тихие часы и частота",
+      "url": "https://github.com/ipanalytics/Hermes-Agent-Ops/tree/main/03-agent-ops-playbook",
+      "text_en": "a digest that arrives when nobody reads it trains the human to ignore digests.",
+      "text_ru": "дайджест, который приходит, когда его не читают, приучает игнорировать дайджесты.",
+      "tags": [
+        "delivery"
+      ]
+    },
+    {
+      "id": "memory-in-topics",
+      "category": "memory",
+      "title_en": "Memory in topics",
+      "title_ru": "Память по темам",
+      "url": "https://github.com/ipanalytics/Hermes-Agent-Ops/tree/main/09-ops-as-data",
+      "text_en": "a small always-loaded core plus one file per subject, read on demand.",
+      "text_ru": "маленькое ядро, всегда загруженное, плюс файл на каждую тему, читаемый по требованию.",
+      "tags": [
+        "memory"
+      ]
+    },
+    {
+      "id": "session-housekeeping",
+      "category": "memory",
+      "title_en": "Session housekeeping",
+      "title_ru": "Гигиена сессий",
+      "url": "https://github.com/ipanalytics/Hermes-Agent-Ops/tree/main/08-session-housekeeping",
+      "text_en": "sessions are a log, not a filing cabinet; name, archive, prune.",
+      "text_ru": "сессия — это лог, а не картотека: назвать, заархивировать, подрезать.",
+      "tags": [
+        "memory",
+        "context"
+      ]
+    },
+    {
+      "id": "skill-library-janitor",
+      "category": "memory",
+      "title_en": "Skill library janitor",
+      "title_ru": "Уборщик библиотеки навыков",
+      "url": "https://github.com/ipanalytics/Hermes-Agent-Ops/tree/main/34-skill-library-janitor",
+      "text_en": "skills accumulate, contradict each other, and describe tools that were renamed last month.",
+      "text_ru": "навыки накапливаются, противоречат друг другу и описывают переименованные инструменты.",
+      "tags": [
+        "memory",
+        "evals"
+      ]
+    },
+    {
+      "id": "blind-spot-audit",
+      "category": "memory",
+      "title_en": "Blind-spot audit",
+      "title_ru": "Аудит слепых зон",
+      "url": "https://github.com/ipanalytics/Hermes-Agent-Ops/tree/main/21-blind-spot-audit",
+      "text_en": "ask what the agent is *not* looking at; the answer is usually more useful than a summary.",
+      "text_ru": "спросите, на что агент не смотрит; ответ обычно полезнее сводки.",
+      "tags": [
+        "evals",
+        "observability"
+      ]
+    },
+    {
+      "id": "gateway-supervisor",
+      "category": "watching-the-machine",
+      "title_en": "Gateway supervisor",
+      "title_ru": "Супервизор шлюза",
+      "url": "https://github.com/ipanalytics/Hermes-Agent-Ops/tree/main/02-agent-gateway-supervisor",
+      "text_en": "the process that talks to the chat platform is the single point of failure.",
+      "text_ru": "процесс, который говорит с мессенджером, — единственная точка отказа.",
+      "tags": [
+        "observability",
+        "isolation"
+      ]
+    },
+    {
+      "id": "harness-probes",
+      "category": "watching-the-machine",
+      "title_en": "Harness probes",
+      "title_ru": "Пробы стенда",
+      "url": "https://github.com/ipanalytics/Hermes-Agent-Ops/tree/main/18-harness-probes",
+      "text_en": "synthetic checks that prove the whole path works: model, tool, transport, permission.",
+      "text_ru": "синтетические проверки всего пути: модель, инструмент, транспорт, права.",
+      "tags": [
+        "observability",
+        "evals"
+      ]
+    },
+    {
+      "id": "ops-as-data",
+      "category": "watching-the-machine",
+      "title_en": "Ops as data",
+      "title_ru": "Операции как данные",
+      "url": "https://github.com/ipanalytics/Hermes-Agent-Ops/tree/main/09-ops-as-data",
+      "text_en": "every job writes a row; the dashboard is a query, not a memory.",
+      "text_ru": "каждая задача пишет строку; дашборд — это запрос, а не воспоминание.",
+      "tags": [
+        "observability",
+        "datasets"
+      ]
+    }
+  ]
+}

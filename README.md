@@ -10,7 +10,7 @@ _Русская версия: [README.ru.md](README.ru.md)_
   <img src="./site/banner.svg" alt="Awesome Agent Ops" width="100%">
 </p>
 
-A curated list of what it actually takes to **run a personal AI agent in production** — not
+A curated list of what it actually takes to **run a personal AI agent (Hermes Agent, Claude Code, any scheduled LLM agent) in production** — not
 prompt tricks, but the boring layer: schedules, context budgets, secrets, sandboxes, delivery,
 and the failure modes nobody warns you about.
 
